@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 03 — Interview Guide and Rehearsal Revision
 
 > Team: [Team 10] | Case: [10 — common-area-issue-reporting] | Target role: [นักศึกษา / ผู้พบปัญหา, เจ้าหน้าที่อาคาร / เจ้าหน้าที่เทคนิค / แม่บ้าน, อาจารย์, ผู้ดูแลความปลอดภัย, ผู้ดูแลระบบ]
