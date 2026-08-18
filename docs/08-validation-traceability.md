@@ -41,7 +41,7 @@
 | CR-ID | Date | Requested Change | Reason / Evidence | Impacted Artefacts | Decision | Owner |
 |---|---|---|---|---|---|---|
 | CR-01 | [18/08/2026] | [ปรับปรุง RC-01 - RC-08 และ E-01 - E-08 ให้สอดคล้องกับ FR-CAR-01 - FR-CAR-08] | [ผลจากการตรวจพบว่า RC-01 - RC-08 และ E-01 - E-08 ไม่สอดคล้องกับ FR-CAR-01 - FR-CAR-08] | docs/05-requirement-backlog.md, docs/08-validation-traceability.md | Accepted | [นาย นนทชัย ไทยตัน] |
-| CR-02 | [18/08/2026] | [ ] | [ ] |  | Accepted | [นาย ภูมิพัฒน์ วงศ์ดาว] |
+| CR-02 | [18/08/2026] | [เเก้ไขหัวข้อที่ FR-CAR-09 - ISSUE-CAR-03] | [เเก้ไขหัวข้อให้ตรงกับ RC เเละ Evidence/Need Trace ที่มีอยู่จริงตาม 04-evidence-log, 04-requirement-cadidates] | docs/05-requirement-backlog.md, docs/08-validation-traceability.md | Accepted | [นาย ภูมิพัฒน์ วงศ์ดาว] |
 | CR-03 | [18/08/2026] | [ ] | [ ] |  | Accepted | [นางสาว ณัฐณิชา ปกแก้ว] |
 
 ## 5. Baseline Decision
