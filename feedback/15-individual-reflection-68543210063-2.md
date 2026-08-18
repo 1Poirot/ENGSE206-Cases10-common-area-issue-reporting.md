@@ -4,44 +4,38 @@
 
 ## Student Information
 
-<<<<<<< HEAD:feedback/15-individual-reflection-68543210063-2.md
 | Field | Detail |
 |---|---|
 | Student ID | 68543210063-2 |
 | Name | ณัฐณิชา  ปกแก้ว |
-| Primary Role(s) | [กรอก] |
-=======
-| Field           | Detail                          |
-| --------------- | ------------------------------- |
-| Student ID      | 68543210012                     |
-| Name            | นาย นนทชัย ไทยตัน               |
-| Primary Role(s) | Requirements Analyst / Reviewer |
-
->>>>>>> origin/Non:feedback/15-individual-reflection-68543210012-9.md
+| Primary Role(s) | Facilitator / Presenter|
 
 ## 1. My Contribution
 
-ผมมีส่วนร่วมในการตรวจสอบและปรับปรุง Requirement โดยเน้นการทำ Baseline Review และ Traceability Review ตรวจสอบความครบถ้วนของ FR/NFR และความเชื่อมโยงระหว่าง Evidence, Stakeholder และ Requirement รวมถึงบันทึก Traceability Gap ของ FR-CAR-03 และเสนอแนวทางแก้ไขใน Cross-Review Form และ Follow-up Backlog
+ทำหน้าที่ Facilitator / Presenter โดยช่วยวางลำดับการทำงานของทีม ควบคุมให้ทีมดำเนินกิจกรรมตามขั้นตอนของ Requirement Baseline Review & Readiness Gate และช่วยสรุปประเด็นสำคัญระหว่างการตรวจสอบ Requirement นอกจากนี้ยังช่วยนำเสนอผลการตรวจ เช่น Quality & MoSCoW Check, Priority Summary, Ready / Follow-up / Hold และ Week06 Handoff เพื่อให้สมาชิกในทีมเข้าใจตรงกัน
+
+
 
 ## 2. What I Learned About Requirements and Design
 
-ผมได้เรียนรู้ว่า Requirement ที่ดีไม่ควรมีเพียงรายละเอียดของฟังก์ชัน แต่ต้องสามารถตรวจสอบย้อนกลับไปยัง Evidence และ Stakeholder Need ได้อย่างชัดเจน รวมถึงต้องมีเงื่อนไขที่สามารถนำไปสร้าง Acceptance Criteria และ Test Case ได้
+ได้เรียนรู้ว่าการทำ Requirement ไม่ใช่เพียงการเขียนว่าระบบต้องทำอะไร แต่ต้องตรวจสอบความสัมพันธ์ระหว่าง Problem, Stakeholder, Evidence, Need และ Requirement ให้สอดคล้องกัน รวมถึงต้องพิจารณาว่า Requirement สามารถวัดและทดสอบได้หรือไม่ และ Priority ที่กำหนดมีเหตุผลเพียงพอหรือไม่
 
 ## 3. A Decision I Influenced
 
-ผมเสนอให้ตรวจสอบ FR-CAR-03 เพิ่มเติม เนื่องจากพบว่า Evidence E-03 ยังเชื่อมโยงกับ RC-03 และ Stakeholder ได้ไม่ชัดเจน จึงกำหนดให้เป็น Conditional Baseline และบันทึกเป็น Open Question ก่อนนำ Requirement ไปใช้ในขั้นตอน Design
+มีส่วนร่วมในการตัดสินใจจัดลำดับ Requirement และกำหนดสถานะ Ready / Needs Follow-up / Hold โดยช่วยให้ทีมแยก Requirement ที่พร้อมสำหรับ Week 06 ออกจาก Requirement ที่ยังต้องยืนยันข้อมูลเพิ่มเติม เช่น FR-CAR-03, FR-CAR-11 และ NFR-CAR-02 เพื่อไม่ให้ทีมกำหนดรายละเอียดจากการคาดเดา
 
 ## 4. Feedback I Received and How I Responded
 
-จากการ Cross-Review พบว่า Requirement บางข้อยังขาด Traceability Link และมีรายละเอียดที่ยังไม่สามารถทดสอบได้อย่างชัดเจน ผมจึงนำ Feedback มาปรับปรุงโดยเพิ่มรายการ Follow-up และระบุประเด็นที่ต้องยืนยันก่อนเริ่ม Design
+จากการตรวจสอบร่วมกัน ได้รับข้อเสนอแนะเกี่ยวกับความชัดเจนของ Requirement และการตรวจสอบ Traceability โดยเฉพาะการระบุ Evidence และ Open Question จึงนำข้อเสนอแนะดังกล่าวมาปรับปรุงการจัดลำดับและการนำเสนอข้อมูลของทีม รวมถึงช่วยให้ทีมบันทึกประเด็นที่ยังไม่สามารถยืนยันได้ไว้สำหรับติดตามใน Week 6
 
 ## 5. What I Would Improve Next Time
 
-ครั้งต่อไปผมควรตรวจสอบ Traceability ตั้งแต่ช่วงเริ่มจัดทำ Requirement และกำหนด Evidence, Stakeholder และ Need/Candidate ให้เชื่อมโยงกันตั้งแต่ต้น เพื่อลดการเกิด Gap ในช่วง Baseline Review
+ครั้งต่อไปควรเตรียมประเด็นสำคัญและหลักฐานอ้างอิงล่วงหน้าให้มากขึ้น เพื่อให้การนำทีมและการนำเสนอมีความกระชับและช่วยให้ทีมตัดสินใจได้เร็วขึ้น นอกจากนี้ควรตรวจสอบ Traceability ก่อนเริ่มการประชุม เพื่อให้สามารถชี้จุดที่ต้องแก้ไขได้ทันที
 
 ## 6. Evidence Links
-FR-CAR-03 Traceability Review
-Cross-Review Form
-Follow-up Backlog
-Traceability Exceptions & Assumptions Log
-SRS v1
+
+- docs/05-requirement-backlog.md
+- docs/08-validation-traceability.md
+- evidence/week-05/baseline-review/
+- project-management/decision-log.md
+- project-management/team-worklog.md
