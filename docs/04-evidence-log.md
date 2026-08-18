@@ -1,32 +1,77 @@
-# 04 — Evidence Log and Issue List
+# 04 — Evidence, Conflict, Negotiation and Requirement Candidates
 
-> **Week 4 deliverable**  
-> เก็บข้อเท็จจริงและสิ่งที่ตีความแยกกันอย่างชัดเจน
+> **Week 04 | AI role output is simulation evidence, not an approved real-world fact.**
 
-## 1. Evidence Log
+## 1. Evidence Tags
 
-| E-ID | Date | Method | Stakeholder/Source | Observation / Quote / Fact | Interpretation | Related Requirement / Open Question | Evidence File |
+`CF` case fact · `SN` simulated need · `CT` constraint/rule · `OP` opinion · `AS` assumption · `PS` proposed solution · `OQ` open question
+
+---
+
+## 2. Evidence Log
+
+| E-ID | Source/role/session | Tag | Statement / observed event | Context  | Confidence + reason | Related/conflicting E-ID | Follow-up/owner |
 |---|---|---|---|---|---|---|---|
-| E-01 | [date] | interview / workshop | [Role] | [ข้อเท็จจริง] | [การตีความ] | [FR-/OQ-] | `../evidence/week-04/...` |
+| E-01 | S-00 Case Description | CF | ผู้ใช้ปัจจุบันแจ้งปัญหาผ่านหลายช่องทาง ทำให้ติดตามสถานะได้ยาก | Current process | High (Case) | E-02 | ใช้เป็นข้อมูลตั้งต้น              |
+| E-02 | S-01 นักศึกษา | SN | ผู้แจ้งต้องการส่งข้อมูลปัญหาพร้อมรูปภาพ สถานที่ และประเภทของปัญหา | Interview | Medium (Simulation) | E-01, E-03 | ยืนยันข้อมูลขั้นต่ำกับเจ้าหน้าที่ |
+| E-03 | S-02 เจ้าหน้าที่อาคาร | SN | หากข้อมูลไม่ครบ เจ้าหน้าที่ต้องสอบถามเพิ่มเติมก่อนดำเนินการ | Workflow | Medium (Simulation) | E-02 | ตรวจสอบแบบฟอร์มจริง               |
+| E-04 | S-02 เจ้าหน้าที่เทคนิค | SN | งานควรถูกจัดลำดับตามระดับความรุนแรงของปัญหา | Priority | Medium (Simulation) | E-05 | ยืนยันเกณฑ์ Priority |
+| E-05 | S-03 ผู้ดูแลความปลอดภัย | SN | เหตุด้านความปลอดภัยควรได้รับการดำเนินการก่อนงานทั่วไป | Safety | Medium (Simulation) | E-04 | ตรวจสอบนโยบายจริง |
+| E-06 | S-01 นักศึกษา | SN | ผู้แจ้งต้องการทราบสถานะการดำเนินงานหลังแจ้งปัญหา | Tracking | Medium (Simulation) | E-01 | ยืนยันรูปแบบการแจ้งเตือน |
+| E-07 | S-03 ผู้ดูแลความปลอดภัย | SN | ปัญหาเดียวกันอาจมีผู้แจ้งหลายคน ทำให้เกิดรายการแจ้งซ้ำ | Duplicate Issue | Medium (Simulation) | E-08 | ตรวจสอบแนวทางจัดการรายการซ้ำ |
+| E-08 | S-04 ผู้ดูแลระบบ | SN | ระบบควรเก็บประวัติการดำเนินงานและกำหนดสิทธิ์การเข้าถึงข้อมูลตามบทบาท | Security | Medium (Simulation) | E-07 | ยืนยันสิทธิ์ผู้ใช้งาน |
+| **E-09** | S-04 ผู้ดูแลระบบ | SN | ผู้ดูแลระบบต้องการค้นหา กรอง และสรุปข้อมูลการแจ้งปัญหาตามอาคาร ประเภทของปัญหา สถานะ และช่วงเวลา เพื่อใช้ติดตามและวิเคราะห์การดำเนินงาน | Reporting | Medium (Simulation) | E-08 | ยืนยันรูปแบบรายงานและข้อมูลที่ต้องการ |
 
-## 2. Issue List / ความขัดแย้งหรือประเด็นที่ต้องตัดสินใจ
 
-| Issue ID | ประเด็น | ฝ่ายที่เกี่ยวข้อง | ทางเลือก | การตัดสินใจ/สถานะ | Rationale |
+
+---
+
+## 3. Issue and Conflict List
+
+| ID | Evidence-linked issue/conflict | Parties + authority | Positions | Interests/constraints | Status |
 |---|---|---|---|---|---|
-| IS-01 | [กรอก] | [กรอก] | A / B | Open / Decided | [กรอก] |
+| C-01 | ข้อมูลขั้นต่ำที่ต้องใช้ในการแจ้งปัญหา (E-02, E-03) | ผู้แจ้ง | ผู้แจ้งต้องการแจ้งได้รวดเร็ว ขณะที่เจ้าหน้าที่ต้องการข้อมูลครบถ้วน | ความสะดวก vs ความครบถ้วนของข้อมูล | Open |
+| C-02 | การจัดลำดับความสำคัญของปัญหา (E-04, E-05) | ผู้ดูแลความปลอดภัย | เจ้าหน้าที่ใช้ Priority ส่วน Security ต้องการให้เหตุอันตรายมาก่อน  | ความรวดเร็วในการตอบสนอง | Open |
+| C-03 | การจัดการรายการแจ้งซ้ำ (E-07) | ผู้แจ้ง / ผู้ดูแลระบบ | สร้างรายการใหม่ทุกครั้ง หรือรวมเป็นเหตุการณ์เดียว | ลดข้อมูลซ้ำและไม่สูญเสียข้อมูลผู้แจ้ง | Open |
+| C-04 | การเข้าถึงข้อมูลและ Audit Log (E-08) | ผู้ดูแลระบบ | ต้องควบคุมสิทธิ์และตรวจสอบย้อนหลัง | ความปลอดภัยของข้อมูล | Open |
 
-## 3. Negotiation Record
 
-| Date | Participants | Topic | Agreed outcome | Follow-up |
-|---|---|---|---|---|
-| [date] | [names/roles] | [กรอก] | [กรอก] | [กรอก] |
+---
 
-## 4. New / Revised Insights
+## 4. Negotiation Record
 
-- [Insight 1]
-- [Insight 2]
+| Conflict | Options considered | Evaluation criteria | Decision/status | Rationale + evidence | Follow-up |
+|---|---|---|---|---|---|
+| **C-01** | A: กรอกข้อมูลขั้นต่ำ<br>B: กรอกข้อมูลครบทุกช่อง | Usability / Completeness | **Provisional** (เลือก B) | ผู้แจ้งสามารถส่งข้อมูลได้สะดวก ขณะที่เจ้าหน้าที่ยังได้รับข้อมูลเพียงพอสำหรับการดำเนินงาน (E-02, E-03) | ยืนยันข้อมูลขั้นต่ำในแบบฟอร์ม |
+| **C-02** | A: ผู้แจ้งกำหนด Priority<br>B: เจ้าหน้าที่กำหนด Priority | Accuracy / Risk | **Provisional** (เลือก B) | เจ้าหน้าที่สามารถประเมินระดับความรุนแรงและผลกระทบของปัญหาได้เหมาะสมกว่า และรองรับกรณีเหตุด้านความปลอดภัย (E-04, E-05) | ยืนยันเกณฑ์การจัดลำดับความสำคัญ |
+| **C-03** | A: สร้างรายการใหม่ทุกครั้ง<br>B: รวมเป็นเหตุการณ์เดียว | Efficiency / Traceability | **Provisional** (เลือก B) | ลดข้อมูลซ้ำและช่วยให้ติดตามการแก้ไขได้ง่ายขึ้น โดยยังคงเก็บข้อมูลผู้แจ้งแต่ละรายไว้ (E-07) | กำหนดเกณฑ์การตรวจจับรายการซ้ำ   |
+| **C-04** | A: ทุกคนเห็นข้อมูลทั้งหมด<br>B: กำหนดสิทธิ์ตามบทบาท | Security / Privacy | **Provisional** (เลือก B) | สนับสนุนการควบคุมสิทธิ์การเข้าถึงข้อมูลและเพิ่มความปลอดภัยของระบบ (E-08) | ยืนยัน Role และ Permission |
 
-## 5. Links to Evidence Files
 
-- [Workshop notes](../evidence/week-04/README.md)
-- [Meeting minutes](../project-management/meeting-minutes/README.md)
+
+---
+
+## 5. Requirement Candidates
+
+| RC ID  | Candidate statement | Rationale  | Evidence E-ID | Status | Confidence | Verification / Follow-up |
+|---|---|---|---|---|---|---|
+| **RC-01** | ระบบต้องรองรับการแนบรูปภาพ ระบุอาคาร ตำแหน่ง และประเภทของปัญหาในการแจ้งปัญหา เพื่อให้เจ้าหน้าที่ได้รับข้อมูลที่เพียงพอสำหรับการดำเนินงาน  | ลดปัญหาข้อมูลไม่ครบและลดการสอบถามข้อมูลเพิ่มเติม | E-02, E-03 | Candidate | Medium | ยืนยันข้อมูลขั้นต่ำที่ต้องใช้ |
+| **RC-02** | ระบบควรแสดงสถานะของรายการแจ้งปัญหา และแจ้งเตือนเมื่อสถานะมีการเปลี่ยนแปลง เพื่อให้ผู้แจ้งสามารถติดตามความคืบหน้าได้ | สนับสนุนการติดตามสถานะของผู้แจ้ง | E-01, E-06 | Candidate | Medium | ยืนยันสถานะและช่องทางการแจ้งเตือน |
+| **RC-03** | ระบบควรช่วยตรวจจับและจัดการรายการแจ้งปัญหาที่อาจเป็นเหตุการณ์เดียวกัน พร้อมรองรับการเก็บข้อมูลผู้แจ้งแต่ละราย | ลดข้อมูลซ้ำและสนับสนุนการติดตามผู้ได้รับผลกระทบ  | E-07 | Candidate | Medium | กำหนดเกณฑ์การตรวจจับรายการซ้ำ |
+| **RC-04** | ระบบต้องรองรับการกำหนดระดับความเร่งด่วนของปัญหา และรองรับการแจ้งเตือนเมื่อเป็นเหตุด้านความปลอดภัย | ช่วยให้เหตุเร่งด่วนได้รับการดำเนินการก่อน | E-04, E-05 | Candidate | Medium | ยืนยันเกณฑ์การจัดลำดับความสำคัญ |
+| **RC-05** | ระบบต้องมีการบันทึกประวัติการดำเนินงาน (Audit Log) ที่ระบุผู้ดำเนินการ วันเวลา และการเปลี่ยนแปลงที่เกิดขึ้น เพื่อรองรับการตรวจสอบย้อนหลัง | เพิ่มความสามารถในการตรวจสอบการดำเนินงาน  | E-08 | Candidate | Medium | ยืนยันรายละเอียด Audit Log |
+| **RC-06** | ระบบต้องกำหนดสิทธิ์การเข้าถึงข้อมูลตามบทบาทของผู้ใช้งาน เพื่อให้ผู้ใช้งานแต่ละประเภทเข้าถึงข้อมูลและดำเนินการได้ตามสิทธิ์ที่ได้รับ | สนับสนุนความปลอดภัยของข้อมูล | E-08 | Candidate | Medium | ยืนยัน Role และ Permission |
+| **RC-07** | ระบบต้องรองรับการมอบหมายงานให้ผู้รับผิดชอบ และรองรับการโอนย้ายงานเมื่อจำเป็น | สนับสนุน Workflow การดำเนินงานของเจ้าหน้าที่ | E-04 | Candidate | Medium | ยืนยัน Workflow การมอบหมายงาน |
+| **RC-08** | ระบบควรรองรับการค้นหา กรอง และแสดงข้อมูลรายการแจ้งปัญหาตามเงื่อนไขที่จำเป็น เพื่อสนับสนุนการติดตามการดำเนินงาน | สนับสนุนการติดตามและบริหารจัดการข้อมูล | E-09 | Candidate | Low | ต้องยืนยันความต้องการกับ Stakeholder ก่อน |
+
+
+---
+
+## 6. Quality Check
+
+* [x] Statement and team interpretation are separated.
+* [x] Every finding has source/tag/context/confidence.
+* [x] Contradictions remain visible; no silent merging.
+* [x] Conflict includes interests, authority and ≥2 options.
+* [x] RCs cite E-IDs and do not claim real-world approval.
+* [x] No personal/confidential data; AI use logged.

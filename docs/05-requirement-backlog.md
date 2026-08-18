@@ -1,10 +1,5 @@
 # 05 — Requirement Backlog v0.1: Campus Resource Booking
 
-> **Case:** Campus Resource Booking System (CRBS)  
-> **Source:** Week04 Completed Example: `E-01..E-14`, `N-AVAIL..N-MIN-DATA`, `RC-01..RC-08`  
-> **Status:** Completed teaching example for Week05  
-> **Goal:** จัดประเภท จัดลำดับ และแยกสิ่งที่พร้อมใช้ต่อ Week06 ออกจากสิ่งที่ยังต้องถามต่อ
-
 ## 1. Project Metadata
 
 | Field | Value |
