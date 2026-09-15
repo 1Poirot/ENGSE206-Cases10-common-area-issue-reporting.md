@@ -35,9 +35,9 @@
 
 ## 3. Follow-up Plan
 
-| Action                                           | Output ที่ต้องได้                     | ใช้ต่อใน Week06 อย่างไร                        |
-| ------------------------------------------------ | ------------------------------------- | ---------------------------------------------- |
-| สัมภาษณ์เจ้าหน้าที่อาคารเพิ่มเติม                | Required Fields ของแบบฟอร์มแจ้งปัญหา  | Acceptance Criteria และ Use Case Preconditions |
+| Action | Output ที่ต้องได้  | ใช้ต่อใน Week06 อย่างไร  |
+| ------- | ---------- | ------------ |
+| สัมภาษณ์เจ้าหน้าที่เพิ่มเติม                | Required Fields ของแบบฟอร์มแจ้งปัญหา  | Acceptance Criteria และ Use Case Preconditions |
 | สอบถามผู้ดูแลความปลอดภัยเรื่อง Priority          | Priority Criteria และ Safety Criteria | Priority Rule และ Alternate Flow               |
 | สอบถามเจ้าหน้าที่เรื่อง Duplicate Issue          | เกณฑ์ตรวจจับและรวมรายการซ้ำ           | Duplicate Detection และ Data Integrity Rule    |
 | ขอ Role-Permission Matrix จากผู้ดูแลระบบ         | รายละเอียดสิทธิ์แต่ละ Role            | Access Control และ Quality Scenario            |
