@@ -237,9 +237,9 @@
 #### 10. Open Issues
 | OI | Question/TBD | Affected IDs | Owner | Next action | Expected evidence | Needed by |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-| **ISS-01** | รูปแบบและประเภทไฟล์รูปภาพที่อนุญาตสำหรับการแนบประกอบคำร้อง (Max file size / formats) | FR-02, EXT-03 | System Analyst / Dev | สรุปเกณฑ์ขนาดไฟล์รูปภาพและนโยบายจัดเก็บ | Storage Specification Doc | Week 08 |
-| **ISS-02** | ช่องทางและรูปแบบการส่ง Notification (In-app, Push Notification) | FR-09, EXT-02 | UX / Dev | สอบถามผู้ใช้และทีมพัฒนาเพื่อสรุปรูปแบบข้อความและช่องทางส่ง | Notification Spec | Week 08 |
-| **ISS-03** | ระยะเวลาการจัดเก็บข้อมูลประวัติย้อนหลัง (Data Retention Policy for History Log) | FR-10, BR-04 | Admin / Compliance | กำหนดกรอบเวลาการสำรองและเก็บประวัติคำร้องย้อนหลัง | Data Retention Policy | Week 08 |
+| **ISS-01** | รูปแบบและประเภทไฟล์รูปภาพที่อนุญาตสำหรับการแนบประกอบคำร้อง (Max file size / formats) | FR-02, EXT-03 | นาย นนทชัย ไทยตัน | สรุปเกณฑ์ขนาดไฟล์รูปภาพและนโยบายจัดเก็บ | Storage Specification Doc | Week 08 |
+| **ISS-02** | ช่องทางและรูปแบบการส่ง Notification (In-app, Push Notification) | FR-09, EXT-02 | นาย ภูมิพัฒน์ วงศ์ดาว | สอบถามผู้ใช้และทีมพัฒนาเพื่อสรุปรูปแบบข้อความและช่องทางส่ง | Notification Spec | Week 08 |
+| **ISS-03** | ระยะเวลาการจัดเก็บข้อมูลประวัติย้อนหลัง (Data Retention Policy for History Log) | FR-10, BR-04 |นางสาว ณัฐณิชา ปกแก้ว | กำหนดกรอบเวลาการสำรองและเก็บประวัติคำร้องย้อนหลัง | Data Retention Policy | Week 08 |
 
 ---
 
