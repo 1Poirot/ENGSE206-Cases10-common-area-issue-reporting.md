@@ -1,0 +1,257 @@
+<mxfile host="65bd71144e">
+    <diagram id="domain-model-v2" name="Domain Model (3 Core Roles)">
+        <mxGraphModel dx="721" dy="956" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1300" background="#F8FAFC" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title_box" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Domain Model — ระบบแจ้งปัญหาพื้นที่ส่วนกลางและติดตามการแก้ไข&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font style=&quot;font-size: 12px; color: #64748B;&quot;&gt;Case No.10: Common Area Issue Reporting System | 3 Core Roles: ผู้แจ้ง, เจ้าหน้าที่, ผู้ดูแลระบบ (docs/06 Model)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;arcSize=6;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="20" width="1240" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_user" value="&lt;p style=&quot;margin:0px;text-align:center;&quot;&gt;&lt;i&gt;&amp;#171;Abstract&amp;#187;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;User&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;+ userId: String [PK]&lt;br/&gt;+ fullName: String&lt;br/&gt;+ email: String&lt;br/&gt;+ phone: String&lt;br/&gt;+ role: UserRole&lt;br/&gt;+ createdAt: DateTime" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fillColor=#FAF5FF;strokeColor=#8B5CF6;arcSize=6;fontColor=#1E293B;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="100" width="250" height="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_location" value="&lt;p style=&quot;margin:0px;text-align:center;&quot;&gt;&lt;b&gt;CommonArea&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;+ locationId: String [PK]&lt;br/&gt;+ building: String&lt;br/&gt;+ floor: String&lt;br/&gt;+ roomOrZone: String&lt;br/&gt;+ landmarkNote: String" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fillColor=#F0FDF4;strokeColor=#22C55E;arcSize=6;fontColor=#1E293B;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="100" width="260" height="155" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_category" value="&lt;p style=&quot;margin:0px;text-align:center;&quot;&gt;&lt;b&gt;IssueCategory&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;+ categoryId: String [PK]&lt;br/&gt;+ categoryName: String&lt;br/&gt;+ defaultDept: String&lt;br/&gt;+ isSafetySensitive: Boolean" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fillColor=#F0FDF4;strokeColor=#22C55E;arcSize=6;fontColor=#1E293B;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="100" width="260" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_reporter" value="&lt;p style=&quot;margin:0px;text-align:center;&quot;&gt;&lt;b&gt;Reporter (ผู้แจ้ง)&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;+ studentOrStaffId: String&lt;br/&gt;+ facultyOrDept: String" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fillColor=#FAF5FF;strokeColor=#8B5CF6;arcSize=6;fontColor=#1E293B;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="350" width="250" height="95" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_report" value="&lt;p style=&quot;margin:0px;text-align:center;&quot;&gt;&lt;b&gt;IssueReport&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;+ reportId: String [PK]&lt;br/&gt;+ trackingId: String [Unique]&lt;br/&gt;+ title: String&lt;br/&gt;+ description: String&lt;br/&gt;+ priority: PriorityLevel&lt;br/&gt;+ isSafetyRisk: Boolean&lt;br/&gt;+ currentStatus: ReportStatus&lt;br/&gt;+ reportedAt: DateTime&lt;br/&gt;+ updatedAt: DateTime&lt;br/&gt;+ closedAt: DateTime [0..1]" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fillColor=#EFF6FF;strokeColor=#3B82F6;arcSize=6;fontColor=#1E293B;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="350" width="320" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_attach" value="&lt;p style=&quot;margin:0px;text-align:center;&quot;&gt;&lt;b&gt;Attachment&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;+ attachmentId: String [PK]&lt;br/&gt;+ fileUrl: String&lt;br/&gt;+ fileName: String&lt;br/&gt;+ fileSize: Integer&lt;br/&gt;+ uploadedAt: DateTime" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fillColor=#FFFBEB;strokeColor=#F59E0B;arcSize=6;fontColor=#1E293B;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="950" y="350" width="250" height="145" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_staff" value="&lt;p style=&quot;margin:0px;text-align:center;&quot;&gt;&lt;b&gt;Staff (เจ้าหน้าที่)&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;+ staffCode: String&lt;br/&gt;+ department: String&lt;br/&gt;+ specialty: String" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fillColor=#FAF5FF;strokeColor=#8B5CF6;arcSize=6;fontColor=#1E293B;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="500" width="250" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_admin" value="&lt;p style=&quot;margin:0px;text-align:center;&quot;&gt;&lt;b&gt;Administrator (ผู้ดูแลระบบ)&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;+ adminLevel: String" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fillColor=#FAF5FF;strokeColor=#8B5CF6;arcSize=6;fontColor=#1E293B;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="700" width="250" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_assign" value="&lt;p style=&quot;margin:0px;text-align:center;&quot;&gt;&lt;b&gt;Assignment&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;+ assignmentId: String [PK]&lt;br/&gt;+ assignedAt: DateTime&lt;br/&gt;+ notes: String&lt;br/&gt;+ status: AssignStatus" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fillColor=#FFF7ED;strokeColor=#F97316;arcSize=6;fontColor=#1E293B;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="700" width="260" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_history" value="&lt;p style=&quot;margin:0px;text-align:center;&quot;&gt;&lt;b&gt;StatusHistory&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;+ historyId: String [PK]&lt;br/&gt;+ fromStatus: ReportStatus&lt;br/&gt;+ toStatus: ReportStatus&lt;br/&gt;+ workNote: String&lt;br/&gt;+ changedAt: DateTime" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fillColor=#FFF7ED;strokeColor=#F97316;arcSize=6;fontColor=#1E293B;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="700" width="260" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_notify" value="&lt;p style=&quot;margin:0px;text-align:center;&quot;&gt;&lt;b&gt;Notification&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;+ notificationId: String [PK]&lt;br/&gt;+ title: String&lt;br/&gt;+ message: String&lt;br/&gt;+ channel: NotifyChannel&lt;br/&gt;+ sentAt: DateTime&lt;br/&gt;+ isRead: Boolean" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fillColor=#FEF2F2;strokeColor=#EF4444;arcSize=6;fontColor=#1E293B;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="1030" y="700" width="250" height="155" as="geometry"/>
+                </mxCell>
+                <mxCell id="c_audit" value="&lt;p style=&quot;margin:0px;text-align:center;&quot;&gt;&lt;b&gt;AuditLog&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;+ auditId: String [PK]&lt;br/&gt;+ actionType: String&lt;br/&gt;+ performedBy: String&lt;br/&gt;+ timestamp: DateTime&lt;br/&gt;+ details: String&lt;br/&gt;+ ipAddress: String" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fillColor=#F8FAFC;strokeColor=#64748B;arcSize=6;fontColor=#1E293B;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="930" width="320" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="enum_box" value="&lt;b&gt;«Enumerations / Value Types»&lt;/b&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;b&gt;• UserRole:&lt;/b&gt; REPORTER, STAFF, ADMINISTRATOR (3 Roles ตาม docs/06)&lt;br/&gt;&lt;b&gt;• PriorityLevel:&lt;/b&gt; LOW, NORMAL, HIGH, URGENT (Critical Safety)&lt;br/&gt;&lt;b&gt;• ReportStatus:&lt;/b&gt; SUBMITTED, PENDING, IN_PROGRESS, RESOLVED, CLOSED, CANCELLED&lt;br/&gt;&lt;b&gt;• NotifyChannel:&lt;/b&gt; IN_APP, EMAIL, SMS&lt;br/&gt;&lt;b&gt;• AssignStatus:&lt;/b&gt; ASSIGNED, TRANSFERRED, COMPLETED" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fillColor=#FFFFFF;strokeColor=#CBD5E1;arcSize=6;fontSize=11;fontColor=#334155;shadow=1;" parent="1" vertex="1">
+                    <mxGeometry x="880" y="930" width="750" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="g_rep" style="endArrow=block;endFill=0;endSize=10;html=1;rounded=0;strokeColor=#8B5CF6;" parent="1" source="c_reporter" target="c_user" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="g_staff" style="endArrow=block;endFill=0;endSize=10;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0.25;entryY=1;entryDx=0;entryDy=0;strokeColor=#8B5CF6;" parent="1" source="c_staff" target="c_user" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="25" y="560"/>
+                            <mxPoint x="25" y="310"/>
+                            <mxPoint x="112" y="310"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="g_adm" style="endArrow=block;endFill=0;endSize=10;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeColor=#8B5CF6;" parent="1" source="c_admin" target="c_user" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="12" y="742"/>
+                            <mxPoint x="12" y="224"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_rep_report" style="endArrow=none;html=1;rounded=0;strokeColor=#3B82F6;" parent="1" source="c_reporter" target="c_report" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_rep_submits" value="submits" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#1D4ED8;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_rep_report" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-14" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_rep_c1" value="1" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_rep_report" vertex="1" connectable="0">
+                    <mxGeometry x="-0.8" relative="1" as="geometry">
+                        <mxPoint y="-12" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_rep_c2" value="0..*" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_rep_report" vertex="1" connectable="0">
+                    <mxGeometry x="0.8" relative="1" as="geometry">
+                        <mxPoint y="-12" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_report_loc" style="endArrow=none;html=1;rounded=0;strokeColor=#22C55E;" parent="1" source="c_report" target="c_location" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_loc" value="occurs at" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#15803D;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_loc" vertex="1" connectable="0">
+                    <mxGeometry x="0.05" relative="1" as="geometry">
+                        <mxPoint x="33" y="10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_loc_c1" value="0..*" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_loc" vertex="1" connectable="0">
+                    <mxGeometry x="-0.75" relative="1" as="geometry">
+                        <mxPoint x="-28" y="12" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_loc_c2" value="1" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_loc" vertex="1" connectable="0">
+                    <mxGeometry x="0.75" relative="1" as="geometry">
+                        <mxPoint x="-16" y="14" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_report_cat" style="endArrow=none;html=1;rounded=0;strokeColor=#22C55E;" parent="1" source="c_report" target="c_category" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_cat" value="classified as" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#15803D;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_cat" vertex="1" connectable="0">
+                    <mxGeometry x="0.05" relative="1" as="geometry">
+                        <mxPoint x="38" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_cat_c1" value="0..*" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_cat" vertex="1" connectable="0">
+                    <mxGeometry x="-0.75" relative="1" as="geometry">
+                        <mxPoint x="18" y="3" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_cat_c2" value="1" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_cat" vertex="1" connectable="0">
+                    <mxGeometry x="0.75" relative="1" as="geometry">
+                        <mxPoint x="-14" y="14" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_report_attach" style="endArrow=none;html=1;rounded=0;strokeColor=#F59E0B;" parent="1" source="c_report" target="c_attach" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_att" value="attaches" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#B45309;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_attach" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint y="-24" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_att_c1" value="1" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_attach" vertex="1" connectable="0">
+                    <mxGeometry x="-0.75" relative="1" as="geometry">
+                        <mxPoint y="20" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_att_c2" value="1..*" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_attach" vertex="1" connectable="0">
+                    <mxGeometry x="0.75" relative="1" as="geometry">
+                        <mxPoint x="7" y="31" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_report_assign" style="endArrow=none;html=1;rounded=0;strokeColor=#F97316;" parent="1" source="c_report" target="c_assign" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_assign" value="assigned via" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#C2410C;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_assign" vertex="1" connectable="0">
+                    <mxGeometry x="-0.05" relative="1" as="geometry">
+                        <mxPoint x="-47" y="-2" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_as_c1" value="1" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_assign" vertex="1" connectable="0">
+                    <mxGeometry x="-0.75" relative="1" as="geometry">
+                        <mxPoint x="-16" y="14" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_as_c2" value="0..*" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_assign" vertex="1" connectable="0">
+                    <mxGeometry x="0.75" relative="1" as="geometry">
+                        <mxPoint x="-16" y="-12" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_assign_staff" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#F97316;" parent="1" source="c_assign" target="c_staff" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="325" y="750"/>
+                            <mxPoint x="325" y="560"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_as_staff" value="assigned to" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#C2410C;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_assign_staff" vertex="1" connectable="0">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-38" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_st_c1" value="0..*" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_assign_staff" vertex="1" connectable="0">
+                    <mxGeometry x="-0.85" relative="1" as="geometry">
+                        <mxPoint x="-12" y="20" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_st_c2" value="1" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_assign_staff" vertex="1" connectable="0">
+                    <mxGeometry x="0.85" relative="1" as="geometry">
+                        <mxPoint y="-14" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_report_hist" style="endArrow=none;html=1;rounded=0;strokeColor=#F97316;" parent="1" source="c_report" target="c_history" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_hist" value="tracks" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#C2410C;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_hist" vertex="1" connectable="0">
+                    <mxGeometry x="-0.05" relative="1" as="geometry">
+                        <mxPoint x="24" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_ht_c1" value="1" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_hist" vertex="1" connectable="0">
+                    <mxGeometry x="-0.75" relative="1" as="geometry">
+                        <mxPoint x="16" y="14" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_ht_c2" value="1..*" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_hist" vertex="1" connectable="0">
+                    <mxGeometry x="0.75" relative="1" as="geometry">
+                        <mxPoint x="16" y="-12" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_report_notify" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#EF4444;" parent="1" source="c_report" target="c_notify" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="980" y="550"/>
+                            <mxPoint x="980" y="770"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_notif" value="triggers" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#B91C1C;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_notify" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2" relative="1" as="geometry">
+                        <mxPoint x="30" y="-14" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_nt_c1" value="1" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_notify" vertex="1" connectable="0">
+                    <mxGeometry x="-0.85" relative="1" as="geometry">
+                        <mxPoint y="-14" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_nt_c2" value="0..*" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_notify" vertex="1" connectable="0">
+                    <mxGeometry x="0.85" relative="1" as="geometry">
+                        <mxPoint x="22" y="-10" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_report_audit" style="endArrow=none;html=1;rounded=0;strokeColor=#64748B;" parent="1" source="c_report" target="c_audit" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl_audit" value="recorded in" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#475569;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_audit" vertex="1" connectable="0">
+                    <mxGeometry x="0.25" relative="1" as="geometry">
+                        <mxPoint x="36" y="77" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_au_c1" value="1" style="edgeLabel;html=1;align=left;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_audit" vertex="1" connectable="0">
+                    <mxGeometry x="-0.85" relative="1" as="geometry">
+                        <mxPoint x="-16" y="14" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_au_c2" value="1..*" style="edgeLabel;html=1;align=right;verticalAlign=bottom;resizable=0;points=[];fontSize=11;fontColor=#1E293B;fontStyle=1;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_report_audit" vertex="1" connectable="0">
+                    <mxGeometry x="0.85" relative="1" as="geometry">
+                        <mxPoint x="-16" y="-14" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_merge" style="endArrow=open;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=#64748B;" parent="1" source="c_report" target="c_report" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="440" y="500"/>
+                            <mxPoint x="440" y="540"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl_merge" value="merged into [0..1]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#475569;labelBackgroundColor=#FFFFFF;spacing=2;" parent="e_merge" vertex="1" connectable="0">
+                    <mxGeometry x="0.05" relative="1" as="geometry">
+                        <mxPoint x="-50" y="-4" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

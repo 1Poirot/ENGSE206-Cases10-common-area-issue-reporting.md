@@ -24,6 +24,11 @@
 | update Status | docs/05-requirement-backlog.md |
 | update Status | docs/05-requirement-backlog.md |
 | upload 05-prioritization-rationale.md | docs/05-prioritization-rationale.md |
+| update Requirement Backlog | docs/05-requirement-backlog.md |
+| PeerCross-Review | evidence/week-05/PeerCross-Review.md |
+| Update validation traceability and individual reflection with contributions and learnings | docs/08-validation-traceability.md, feedback/15-individual-reflection-68543210038-4.md, project-management/team-worklog.md |
+| docs(06): add sections 1-2 | docs/06-requirement-models.md |
+| docs(06): update roles in user stories and acceptance criteria | docs/06-requirement-models.md |
 
 ## 2. What I Learned About Requirements and Design
 
