@@ -5,10 +5,15 @@
 
 ## Document Control
 
-| Version | Date | Author | Reviewer | Summary of Change |
-|---|---|---|---|---|
-| 0.1 |19/09/2026 | | | Initial draft |
-| 1.0 |20/09/2026 | | | Baseline candidate -|
+| Field | Value |
+|---|---|
+| Case ID | Case-05 |
+| Document ID | Case-05-SRS-W07-v1 |
+| Version | 0.1-draft |
+| Status | Draft — รอทีมตรวจทานและยืนยันข้อมูลที่ยังขาด |
+| Team/Owner | Group05 |
+| W05 source snapshot | [05-requirement-backlog.md](05-requirement-backlog.md), v1.0, วันที่ในเอกสาร 2026-08-21;  |
+| W06 source snapshot | [06-requirement-models.md](06-requirement-models.md), Week 6 deliverable, ไม่ระบุเลขรุ่น; |
 
 ## 1. Introduction
 
@@ -279,9 +284,7 @@
 | RC-06, E-08 | BR-02 (Must) | US-03, US-04, UC-03 | Section 4 | VF-02, VF-03 | **Covered** |
 | RC-06, E-07 | BR-03 (Must) | US-04, UC-03, AC-04 | Section 4 | VF-03 | **Covered** |
 | RC-05, E-08 | BR-04 (Must) | US-09, UC-04, AC-09 | Section 4 | VF-05 | **Covered** |
-| E-09 | NFR-01 (Should) | - | Section 5 | VF-06 | **Covered** |
-| E-13 | NFR-02 (Must) | - | Section 5 | VF-07 | **Covered** |
-| E-14, E-08 | NFR-03 (Must) | US-09, UC-04, AC-09 | Section 5 | VF-05 | **Covered** |
+
 
 ---
 
