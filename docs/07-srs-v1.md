@@ -11,7 +11,7 @@
 | Document ID | Case-10-SRS-W07-v1 |
 | Version | 0.1-draft |
 | Status | Draft — รอทีมตรวจทานและยืนยันข้อมูลที่ยังขาด |
-| Team/Owner | Group05 |
+| Team/Owner | Group10 |
 | W05 source snapshot | [05-requirement-backlog.md](05-requirement-backlog.md), v1.0, วันที่ในเอกสาร 2026-08-21;  |
 | W06 source snapshot | [06-requirement-models.md](06-requirement-models.md), Week 6 deliverable, ไม่ระบุเลขรุ่น; |
 
