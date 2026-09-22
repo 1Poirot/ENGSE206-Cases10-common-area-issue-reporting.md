@@ -7,8 +7,8 @@
 
 | Field | Value |
 |---|---|
-| Case ID | Case-05 |
-| Document ID | Case-05-SRS-W07-v1 |
+| Case ID | Case-10 |
+| Document ID | Case-10-SRS-W07-v1 |
 | Version | 0.1-draft |
 | Status | Draft — รอทีมตรวจทานและยืนยันข้อมูลที่ยังขาด |
 | Team/Owner | Group05 |
