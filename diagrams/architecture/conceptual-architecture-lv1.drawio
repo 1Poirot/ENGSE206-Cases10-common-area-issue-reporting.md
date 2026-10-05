@@ -1,0 +1,91 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="หน้า-1" id="Kmo6_S7Sg1Hd-64czR7Y">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;ACT-01&lt;/span&gt;&lt;/div&gt;ผู้แจ้งปัญหา (Reporter)" vertex="1">
+          <mxGeometry height="60" width="30" x="-60" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;ACT-02&lt;/span&gt;&lt;/div&gt;เจ้าหน้าที่ (Staff / Officer)" vertex="1">
+          <mxGeometry height="60" width="30" x="-60" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;ACT-03&lt;/span&gt;&lt;/div&gt;ผู้ดูแลระบบ (System Administrator)" vertex="1">
+          <mxGeometry height="60" width="30" x="-60" y="695" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-7" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="426" width="380" x="280" y="344" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-4" parent="K1vt5M9Bl5ceby06xBcw-7" style="rounded=0;whiteSpace=wrap;html=1;" value="CRBS&lt;br&gt;Common Area Issue Reporting System" vertex="1">
+          <mxGeometry height="70" width="380" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-5" parent="K1vt5M9Bl5ceby06xBcw-7" style="rounded=0;whiteSpace=wrap;html=1;align=left;" value="&lt;div&gt;&amp;nbsp; &amp;nbsp;ระบบรับผิดชอบ&lt;span style=&quot;font-size: 12px;&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;รับและจัดการรายการแจ้งปัญหา&lt;/li&gt;&lt;li&gt;จัดการ Report ID และสถานะของปัญหา&lt;/li&gt;&lt;li&gt;จัดการข้อมูล รูปภาพ และประวัติรายการ&lt;/li&gt;&lt;li&gt;ตรวจสอบรายการแจ้งปัญหาซ้ำ&lt;/li&gt;&lt;li&gt;ส่งการแจ้งเตือนสถานะ&lt;/li&gt;&lt;li&gt;ควบคุมสิทธิ์ผู้ใช้งานและบันทึก Audit Log&lt;/li&gt;&lt;li&gt;เชื่อมต่อบริการยืนยันตัวตน การแจ้งเตือน และจัดเก็บไฟล์&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="356" width="380" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-8" edge="1" parent="1" source="K1vt5M9Bl5ceby06xBcw-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.004;entryY=0.086;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" target="K1vt5M9Bl5ceby06xBcw-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-9" edge="1" parent="1" source="K1vt5M9Bl5ceby06xBcw-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.002;entryY=0.482;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" target="K1vt5M9Bl5ceby06xBcw-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-10" edge="1" parent="1" source="K1vt5M9Bl5ceby06xBcw-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.002;entryY=0.871;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" target="K1vt5M9Bl5ceby06xBcw-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-12" parent="1" style="text;whiteSpace=wrap;" value="ส่งข้อมูลแจ้งปัญหา (อาคาร, ตำแหน่ง, ประเภท, รูปภาพ), ค้นหา/ติดตามสถานะคำร้องของตนเอง" vertex="1">
+          <mxGeometry height="34" width="240" x="35" y="398.75" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-14" parent="1" style="text;whiteSpace=wrap;" value="หมายเลขอ้างอิงคำร้อง (Report ID), สถานะการดำเนินงาน, ผลการแก้ไข, การแจ้งเตือน" vertex="1">
+          <mxGeometry height="40" width="200" x="35" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-15" parent="1" style="text;whiteSpace=wrap;" value="ตรวจสอบคิวงาน, กรอง/ค้นหาคำร้อง, อัปเดตสถานะ, บันทึกผลการแก้ไขปัญหา (Worklog)" vertex="1">
+          <mxGeometry height="40" width="220" x="35" y="537" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-18" parent="1" style="text;whiteSpace=wrap;" value="กำหนดบทบาท/สิทธิ์ (RBAC), ตรวจสอบความถูกต้องของระบบ, ดู Audit Log" vertex="1">
+          <mxGeometry height="40" width="290" x="-15" y="679.25" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-19" parent="1" style="text;whiteSpace=wrap;" value="รายงานประวัติการทำงานย้อนหลัง (Audit Trail), สรุปข้อมูลเชิงเทคนิค" vertex="1">
+          <mxGeometry height="40" width="270" x="-15" y="727.5" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;EXT-01&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;University Identity Service (SSO)&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="56.5" width="220" x="940" y="405.75" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;EXT-02&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Notification Service&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="56.5" width="220" x="940" y="528.75" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;EXT-03&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Dedicated File / Object Storage&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="56.5" width="220" x="940" y="671" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-24" edge="1" parent="1" source="K1vt5M9Bl5ceby06xBcw-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.012;entryY=0.056;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" target="K1vt5M9Bl5ceby06xBcw-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-25" edge="1" parent="1" source="K1vt5M9Bl5ceby06xBcw-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.998;entryY=0.401;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" target="K1vt5M9Bl5ceby06xBcw-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-26" edge="1" parent="1" source="K1vt5M9Bl5ceby06xBcw-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.002;entryY=0.802;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" target="K1vt5M9Bl5ceby06xBcw-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-29" parent="1" style="text;whiteSpace=wrap;" value="CRBS ส่ง คำขอยืนยันตัวตนผู้ใช้งานและสิทธิ์การเข้าถึง" vertex="1">
+          <mxGeometry height="40" width="220" x="680" y="392.75" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-31" parent="1" style="text;whiteSpace=wrap;" value="CRBS รับ User Reference และ Role Claim (ข้อมูลยืนยันตัวตนและบทบาท)" vertex="1">
+          <mxGeometry height="40" width="240" x="680" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-32" parent="1" style="text;whiteSpace=wrap;" value="CRBS ส่ง ข้อมูลเหตุการณ์การเปลี่ยนสถานะเพื่อส่งแจ้งเตือนผู้ใช้" vertex="1">
+          <mxGeometry height="40" width="220" x="680" y="515" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-33" parent="1" style="text;whiteSpace=wrap;" value="CRBS รับ ผลลัพธ์การส่งข้อความแจ้งเตือน (Status Delivery)" vertex="1">
+          <mxGeometry height="40" width="240" x="680" y="563" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-34" parent="1" style="text;whiteSpace=wrap;" value="CRBS ส่ง ไฟล์รูปภาพประกอบคำร้องที่ผ่านการตรวจสอบแล้ว" vertex="1">
+          <mxGeometry height="40" width="220" x="680" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-35" parent="1" style="text;whiteSpace=wrap;" value="CRBS รับ URL / Path ของไฟล์รูปภาพที่จัดเก็บสำเร็จ" vertex="1">
+          <mxGeometry height="40" width="240" x="680" y="705.25" as="geometry" />
+        </mxCell>
+        <mxCell id="K1vt5M9Bl5ceby06xBcw-17" parent="1" style="text;whiteSpace=wrap;" value="รายการคำร้องที่ต้องรับผิดชอบ, ข้อมูลปัญหาและภาพถ่าย, ประวัติการดำเนินงาน" vertex="1">
+          <mxGeometry height="40" width="245" x="35" y="585.25" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
